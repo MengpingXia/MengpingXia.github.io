@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Portfolio</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f5f7fa;
+      --text: #1f2933;
+      --muted: #616e7c;
+      --accent: #cc0033; /* Rutgers scarlet; change if you like */
+      --border: #e4e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav {
+      position: sticky; top: 0;
+      background: rgba(255,255,255,0.95);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+    .nav-inner {
+      max-width: 900px; margin: 0 auto;
+      padding: 14px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 8px;
+    }
+    .nav-inner .logo { font-weight: 700; color: var(--text); }
+    .nav-inner ul { list-style: none; display: flex; gap: 20px; }
+    .nav-inner ul a { color: var(--muted); font-size: 0.95rem; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 64px 0; }
+    section:nth-of-type(even) { background: var(--bg-soft); }
+    h2 {
+      font-size: 1.6rem; margin-bottom: 24px;
+      padding-bottom: 8px; border-bottom: 3px solid var(--accent);
+      display: inline-block;
+    }
+
+    /* Hero / Personal Statement */
+    #about { padding: 96px 0 72px; }
+    #about h1 { font-size: 2.6rem; line-height: 1.2; margin-bottom: 8px; }
+    #about .subtitle { color: var(--muted); font-size: 1.1rem; margin-bottom: 24px; }
+    #about .statement {
+      font-size: 1.25rem; max-width: 720px;
+      border-left: 4px solid var(--accent); padding-left: 16px;
+    }
+    .links { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 10px 18px; border-radius: 6px;
+      border: 1px solid var(--accent); font-weight: 600; font-size: 0.95rem;
+    }
+    .btn.primary { background: var(--accent); color: #fff; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+
+    /* Skills */
+    .skill-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .skill-group {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 10px; padding: 20px;
+    }
+    .skill-group h3 { font-size: 1.05rem; margin-bottom: 12px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      background: #fdecef; color: var(--accent);
+      padding: 4px 10px; border-radius: 999px; font-size: 0.88rem; font-weight: 500;
+    }
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 10px; padding: 22px;
+      display: flex; flex-direction: column;
+    }
+    .card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+    .card .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 10px; }
+    .card p { flex: 1; margin-bottom: 14px; }
+    .card .card-links { display: flex; gap: 14px; font-weight: 600; font-size: 0.95rem; }
+
+    footer {
+      text-align: center; padding: 32px 20px;
+      color: var(--muted); font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      #about h1 { font-size: 2rem; }
+      #about .statement { font-size: 1.1rem; }
+      .nav-inner ul { gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <span class="logo">Your Name</span>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 1. PERSONAL STATEMENT (one sentence) -->
+  <section id="about">
+    <div class="container">
+      <h1>Your Name</h1>
+      <p class="subtitle">Finance Student · Rutgers Business School · Class of 2028</p>
+      <p class="statement">
+        <!-- Replace with YOUR one-sentence statement -->
+        I am a finance junior at Rutgers Business School who uses data analysis and financial modeling to turn numbers into clear business decisions.
+      </p>
+      <div class="links">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn" href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3>Finance</h3>
+          <div class="tags">
+            <span class="tag">Financial Modeling</span>
+            <span class="tag">Valuation (DCF)</span>
+            <span class="tag">Financial Statement Analysis</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Technical</h3>
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Tableau</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Professional</h3>
+          <div class="tags">
+            <span class="tag">Data Visualization</span>
+            <span class="tag">Presentation</span>
+            <span class="tag">Teamwork</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PROJECTS (at least 2-3) -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects">
+
+        <div class="card">
+          <h3>Project Title 1</h3>
+          <p class="meta">Course name or context · Tools used</p>
+          <p>Two or three sentences: what problem you worked on, what you did, and what the result was.</p>
+          <div class="card-links">
+            <a href="https://github.com/your-username/project-1" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Project Title 2</h3>
+          <p class="meta">Course name or context · Tools used</p>
+          <p>Two or three sentences: what problem you worked on, what you did, and what the result was.</p>
+          <div class="card-links">
+            <a href="https://github.com/your-username/project-2" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Project Title 3</h3>
+          <p class="meta">Course name or context · Tools used</p>
+          <p>Two or three sentences: what problem you worked on, what you did, and what the result was.</p>
+          <div class="card-links">
+            <a href="https://github.com/your-username/project-3" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Contact: <a href="mailto:your.email@rutgers.edu">your.email@rutgers.edu</a> · <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></p>
+    <p>© 2026 Your Name</p>
+  </footer>
+
+</body>
+</html>
