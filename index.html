@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Portfolio</title>
+  <title>Mengping Xia | Portfolio</title>
   <style>
     :root {
       --bg: #ffffff;
       --bg-soft: #f5f7fa;
       --text: #1f2933;
       --muted: #616e7c;
-      --accent: #cc0033; /* Rutgers scarlet; change if you like */
+      --accent: #cc0033; /* Rutgers scarlet */
       --border: #e4e7eb;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -78,16 +78,26 @@
     }
 
     /* Projects */
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .projects { display: grid; grid-template-columns: 1fr; gap: 24px; }
     .card {
       background: var(--bg); border: 1px solid var(--border);
-      border-radius: 10px; padding: 22px;
-      display: flex; flex-direction: column;
+      border-radius: 10px; padding: 24px;
     }
-    .card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+    .card h3 { font-size: 1.15rem; margin-bottom: 6px; }
     .card .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 10px; }
-    .card p { flex: 1; margin-bottom: 14px; }
-    .card .card-links { display: flex; gap: 14px; font-weight: 600; font-size: 0.95rem; }
+    .card p { margin-bottom: 12px; }
+    .card ul { margin: 0 0 12px 20px; }
+    .card li { margin-bottom: 4px; }
+    .card figure { margin-top: 8px; }
+    .card img {
+      width: 100%; height: auto; display: block;
+      border: 1px solid var(--border); border-radius: 8px;
+    }
+    .card figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 8px; }
+    code {
+      font-family: SFMono-Regular, Menlo, Consolas, monospace;
+      background: var(--bg-soft); padding: 1px 5px; border-radius: 4px; font-size: 0.9em;
+    }
 
     footer {
       text-align: center; padding: 32px 20px;
@@ -106,7 +116,7 @@
 
   <nav>
     <div class="nav-inner">
-      <span class="logo">Your Name</span>
+      <span class="logo">Mengping Xia</span>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -119,16 +129,14 @@
   <!-- 1. PERSONAL STATEMENT (one sentence) -->
   <section id="about">
     <div class="container">
-      <h1>Your Name</h1>
+      <h1>Mengping Xia</h1>
       <p class="subtitle">Finance Student · Rutgers Business School · Class of 2028</p>
       <p class="statement">
-        <!-- Replace with YOUR one-sentence statement -->
         I am a finance junior at Rutgers Business School who uses data analysis and financial modeling to turn numbers into clear business decisions.
       </p>
       <div class="links">
         <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn" href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://github.com/MengpingXia/MengpingXia.github.io" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </section>
@@ -141,24 +149,23 @@
         <div class="skill-group">
           <h3>Finance</h3>
           <div class="tags">
-            <span class="tag">Financial Modeling</span>
-            <span class="tag">Valuation (DCF)</span>
-            <span class="tag">Financial Statement Analysis</span>
+            <span class="tag">Accounting</span>
+            <span class="tag">Marketing</span>
           </div>
         </div>
         <div class="skill-group">
           <h3>Technical</h3>
           <div class="tags">
-            <span class="tag">Excel</span>
+            <span class="tag">SQL (MySQL)</span>
             <span class="tag">Python</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Tableau</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Obsidian</span>
           </div>
         </div>
         <div class="skill-group">
           <h3>Professional</h3>
           <div class="tags">
-            <span class="tag">Data Visualization</span>
+            <span class="tag">Multilingual</span>
             <span class="tag">Presentation</span>
             <span class="tag">Teamwork</span>
           </div>
@@ -167,37 +174,31 @@
     </div>
   </section>
 
-  <!-- 3. PROJECTS (at least 2-3) -->
+  <!-- 3. PROJECTS -->
   <section id="projects">
     <div class="container">
       <h2>Projects</h2>
       <div class="projects">
 
         <div class="card">
-          <h3>Project Title 1</h3>
-          <p class="meta">Course name or context · Tools used</p>
-          <p>Two or three sentences: what problem you worked on, what you did, and what the result was.</p>
-          <div class="card-links">
-            <a href="https://github.com/your-username/project-1" target="_blank" rel="noopener">Code →</a>
-          </div>
+          <h3>Course-to-Obsidian Study Skill with Quiz Simulation</h3>
+          <p class="meta">Personal project · Claude Skills · Obsidian · Markdown</p>
+          <p>Created an AI skill that quickly turns course materials into organized notes inside my Obsidian vault, so every chapter ends up in the same consistent study format.</p>
+          <ul>
+            <li>Combines textbook chapters, lecture slides and my existing notes into one Markdown study note per chapter.</li>
+            <li>Includes a quiz simulation feature: after each graded quiz, it analyzes the question patterns and updates practice quizzes for each chapter.</li>
+          </ul>
         </div>
 
         <div class="card">
-          <h3>Project Title 2</h3>
-          <p class="meta">Course name or context · Tools used</p>
-          <p>Two or three sentences: what problem you worked on, what you did, and what the result was.</p>
-          <div class="card-links">
-            <a href="https://github.com/your-username/project-2" target="_blank" rel="noopener">Code →</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Project Title 3</h3>
-          <p class="meta">Course name or context · Tools used</p>
-          <p>Two or three sentences: what problem you worked on, what you did, and what the result was.</p>
-          <div class="card-links">
-            <a href="https://github.com/your-username/project-3" target="_blank" rel="noopener">Code →</a>
-          </div>
+          <h3>Organizing a Database with MySQL</h3>
+          <p class="meta">Database project · MySQL Workbench · SQL</p>
+          <p>Used MySQL to organize and analyze the Sakila movie-rental database, writing queries with aggregation (<code>AVG</code>), <code>GROUP BY</code> and <code>ORDER BY</code> to turn raw tables into clear summaries.</p>
+          <p>Example: ranking film ratings by average rental rate shows PG films have the highest average rate (about $3.05) and G films the lowest (about $2.89).</p>
+          <figure>
+            <img src="mysql-project.png" alt="MySQL Workbench query grouping films by rating and ordering by average rental rate, with five result rows from PG at 3.05 to G at 2.89">
+            <figcaption>Query and result in MySQL Workbench</figcaption>
+          </figure>
         </div>
 
       </div>
@@ -205,8 +206,8 @@
   </section>
 
   <footer id="contact">
-    <p>Contact: <a href="mailto:your.email@rutgers.edu">your.email@rutgers.edu</a> · <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></p>
-    <p>© 2026 Your Name</p>
+    <p>Contact: <a href="mailto:mx132@scarletmail.rutgers.edu">mx132@scarletmail.rutgers.edu</a> · <a href="https://github.com/MengpingXia/MengpingXia.github.io" target="_blank" rel="noopener">GitHub</a></p>
+    <p>© 2026 Mengping Xia</p>
   </footer>
 
 </body>
